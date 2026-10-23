@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hello CI/CD</title>
   </head>
+  <script type="module">
+  import { greet } from "./greet.js";
+
+  const nameInput = document.getElementById("name");
+  const button = document.getElementById("greet-button");
+  const result = document.getElementById("result");
+
+  button.addEventListener("click", () => {
+    const message = greet(nameInput.value);
+    result.textContent = message;
+  });
+</script>
   <body>
-    <h1>Hello CI/CD!</h1>
-    <p>GitHub Actionsでテストし、GitHub Pagesで公開する練習ページです。</p>
-  </body>
+  <h1>挨拶アプリ</h1>
+
+  <label for="name">名前</label>
+  <input id="name" type="text" />
+
+  <button id="greet-button" type="button">挨拶する</button>
+
+  <p id="result"></p>
+</body>
 </html>
