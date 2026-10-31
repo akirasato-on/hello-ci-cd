@@ -5,3 +5,6 @@ import { greet } from "../src/greet.js";
 test("名前を入れると、その名前で挨拶する", () => {
   assert.equal(greet("佐藤"), "こんにちは、佐藤さん！");
 });
+test("名前が空なら入力を促す", () => {
+  assert.equal(greet(""), "名前を入力してください");
+});
