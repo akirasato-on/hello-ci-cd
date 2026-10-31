@@ -1,5 +1,5 @@
 export function greet(name) {
   return name.trim()
     ? `こんにちは、${name.trim()}さん！`
-    : "こんにちは！";
+    : "名前を入力してください";
 }
